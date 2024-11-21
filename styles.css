@@ -276,6 +276,7 @@ h3 {
 
 .sesion {
     background-color: #000000;
+    margin: 5px;
 }
 
 .btn {
@@ -294,7 +295,8 @@ h3 {
     display: block;
     padding: 10px;
     font-size: 20px;
-
+    text-align: center;
+    gap: 10px;
     text-decoration: none;
     color: white;
     border-radius: 10px;
