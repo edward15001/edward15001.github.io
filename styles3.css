@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+h2 {
+    color: #000000;
+}
+
+p {
+    text-align: justify;
+}
+
+ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.waveA {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+}
+
+.waveA svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 117px;
+    transform: rotateY(180deg);
+}
+
+.waveA .shape-fill {
+    fill: #FF6347;
+}
+
+.waveC {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+
+}
+
+.waveC svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 146px;
+    transform: rotateY(180deg);
+}
+
+.waveC .shape-fill {
+    fill: #4682B4;
+}
+
+.waveE {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+
+}
+
+.waveE svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 146px;
+    transform: rotateY(180deg);
+}
+
+.waveE .shape-fill {
+    fill: #32CD32;
+}
+
+.waveG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+
+}
+
+.waveG svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 146px;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.waveG .shape-fill {
+    fill: #FFA500;
+}
+
+.rojo {
+    border: rgba(255, 0, 0, 0.452) solid 5px;
+    border-radius: 15px;
+    background-color: #ff634763;
+    padding: 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.azul {
+    border: rgba(0, 0, 255, 0.452) solid 5px;
+    border-radius: 15px;
+    background-color: #4682b463;
+    padding: 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.verde {
+    border: rgba(0, 255, 0, 0.452) solid 5px;
+    border-radius: 15px;
+    background-color: #32cd3263;
+    padding: 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.amarillo {
+    border: rgba(255, 255, 0, 0.452) solid 5px;
+    border-radius: 15px;
+    background-color: #ffa50063;
+    padding: 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.volver {
+    margin-top: 20px;
+    background-color: #9fcd32;
+}

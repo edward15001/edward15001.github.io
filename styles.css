@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    z-index: 1;
+}
+
+.login-title {
+    padding: 10px;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.wave .shape-fill {
+    fill: #4682b4;
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+}
+
+.sidebar {
+    background-color: #b446a4;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 10%;
+    font-size: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    z-index: 1;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.wave2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 171px;
+}
+
+.wave2 .shape-fill {
+    fill: #32cd32;
+}
+
+.waveA {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+}
+
+.waveA svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 117px;
+    transform: rotateY(180deg);
+}
+
+.waveA .shape-fill {
+    fill: #FF6347;
+}
+
+.waveC {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+
+}
+
+.waveC svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 146px;
+    transform: rotateY(180deg);
+}
+
+.waveC .shape-fill {
+    fill: #4682B4;
+}
+
+.waveE {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+
+}
+
+.waveE svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 146px;
+    transform: rotateY(180deg);
+}
+
+.waveE .shape-fill {
+    fill: #32CD32;
+}
+
+.waveG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+
+}
+
+.waveG svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 146px;
+    transform: rotateY(180deg);
+}
+
+.waveG .shape-fill {
+    fill: #FFA500;
+}
+
+.waveM {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+
+}
+
+.waveM svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 146px;
+    transform: rotateY(180deg);
+}
+
+.waveM .shape-fill {
+    fill: #b446a4;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 35px;
+    color: #333;
+}
+
+h3 {
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: #333;
+}
+
+.paragraph {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    text-align: left;
+    z-index: 1;
+    width: 50%;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 20px;
+}
+
+.boton_session {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.sesion {
+    background-color: #000000;
+}
+
+.btn {
+    display: block;
+    padding: 25px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn2 {
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn_session {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebottons {
+    background-color: #5d2454;
+}
+
+.sidebottons:hover {
+    background-color: #363636;
+    transition: background-color 0.5s ease;
+}
+
+.algebra {
+    background-color: #ff6347;
+    /* Rojo Tomate */
+}
+
+.calculo {
+    background-color: #4682b4;
+    /* Azul Acero */
+}
+
+.estadistica {
+    background-color: #32cd32;
+    /* Verde Lima */
+}
+
+.geometria {
+    background-color: #ffa500;
+    /* Naranja */
+}
+
+.menu {
+    background-color: #b446a4;
+}
+
+.volver {
+    background-color: #9fcd32;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.disabled {
+    background-color: gray !important;
+    pointer-events: none;
+    /* No permite hacer clic */
+}
+
+/* Estilos para el modal de video */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    z-index: 2;
+}

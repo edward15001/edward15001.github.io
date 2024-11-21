@@ -1,0 +1,291 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+    position: relative;
+
+    /* Para evitar el scroll debido al SVG */
+}
+
+#options {
+    margin-right: 20px;
+    margin-top: 3rem;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+.dropzone {
+    border: 2px dashed #000000;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+}
+
+.draggable {
+    padding: 10px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #000000;
+    cursor: move;
+}
+
+.correct {
+    background-color: #c8e6c9;
+    /* verde claro */
+}
+
+.incorrect {
+    background-color: #ffcdd2;
+    /* rojo claro */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.dropzone-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+h3 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    /* Centrar opciones */
+    flex-wrap: wrap;
+    /* Permitir que las opciones se envuelvan */
+    margin: 20px 0;
+    /* Espacio superior e inferior */
+}
+
+.opcion {
+    border: 2px solid #a200ff;
+    /* Borde verde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    padding: 10px;
+    /* Espaciado interno */
+    margin: 10px;
+    /* Espacio entre opciones */
+    cursor: pointer;
+    /* Cambiar el cursor al pasar por encima */
+    transition: background-color 0.3s;
+    /* Transición suave para el color de fondo */
+    display: flex;
+    /* Flex para alinear el contenido */
+    align-items: center;
+    /* Centrar verticalmente */
+}
+
+.opcion:hover {
+    background-color: #f0f0f0;
+    /* Color de fondo al pasar el ratón */
+}
+
+.rectangulo {
+    margin: 20px auto;
+    width: 200px;
+    /* Ancho del rectángulo */
+    height: 120px;
+    /* Alto del rectángulo */
+    background-color: rgb(148, 148, 148);
+    /* Color de fondo blanco */
+    border: 3px solid rgb(0, 0, 0);
+    /* Borde del rectángulo en amarillo */
+    position: relative;
+    /* Para posicionar las etiquetas */
+    display: inline-block;
+    /* Para que el rectángulo y la altura estén en la misma línea */
+}
+
+
+.resultado {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.medida {
+    font-size: 14px;
+    color: #1d291d;
+    margin: 5px;
+    /* Espacio entre las medidas y el rectángulo */
+}
+
+.base {
+    margin-top: 10px;
+    /* Espacio superior para la medida de la base */
+}
+
+.altura {
+    margin-left: 10px;
+    /* Espacio a la izquierda para la medida de la altura */
+    display: inline-block;
+    /* Para que el margen funcione correctamente */
+    justify-content: center;
+    align-items: center;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.wave .shape-fill {
+    fill: #9c272785;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    z-index: 2;
+    /* Asegúrate de que esté por encima de la ola */
+    position: relative;
+    /* Para que el z-index funcione */
+}
+
+p {
+    text-align: justify;
+    color: black;
+    /* Cambiar el color del texto a negro */
+    z-index: 2;
+    /* Asegúrate de que esté por encima de la ola */
+    position: relative;
+    /* Para que el z-index funcione */
+}
+
+.exercise-box {
+    border: #b446a4 solid 5px;
+    border-radius: 15px;
+    background-color: #b446a486;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    /* Usar flexbox para centrar contenido */
+    flex-direction: column;
+    /* Colocar elementos en columna */
+    align-items: center;
+    /* Centrar horizontalmente */
+    justify-content: center;
+    /* Centrar verticalmente */
+    z-index: 2;
+    /* Asegúrate de que esté por encima de la ola */
+}
+
+label {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    /* Centrar texto */
+    color: black;
+    /* Cambiar el color del texto a negro */
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.btn-submit {
+    background-color: #1d771d;
+}
+
+.btn-reset {
+    background-color: #cd3232;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.result {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    /* Centrar texto */
+    color: black;
+    /* Cambiar el color del texto a negro */
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.corregir {
+    background-color: #1d771d;
+}
+
+.volver {
+    margin-top: 20px;
+    background-color: #9fcd32;
+    /* Verde claro */
+}

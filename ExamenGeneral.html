@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="examenGen.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="exercise-box">
+            <h1>Ejercicio de Álgebra</h1>
+            <p>Resuelve la siguiente ecuación:</p>
+            <p>2x + 3 = 11</p>
+
+            <label for="answer">¿Cuál es el valor de x?</label>
+            <input type="number" id="answer" placeholder="Ingresa tu respuesta" required>
+            <button class="btn-submit" onclick="checkAnswer()">Enviar</button>
+            <button class="btn-reset" onclick="resetInput()">Reiniciar</button>
+
+            <p class="result" id="result"></p>
+        </div>
+
+
+
+        <div class="exercise-box">
+            <h1>Ejercicio de Cálculo 1</h1>
+            <p>¿Cuánto es 5 + 3?</p>
+
+            <form id="quizForm">
+                <div class="opciones">
+                    <label class="opcion">
+                        <input type="radio" id="opcion1" name="respuesta" value="6" style="display: none;"
+                            onchange="verificarRespuesta()">
+                        6
+                    </label>
+                    <label class="opcion">
+                        <input type="radio" id="opcion2" name="respuesta" value="7" style="display: none;"
+                            onchange="verificarRespuesta()">
+                        7
+                    </label>
+                    <label class="opcion">
+                        <input type="radio" id="opcion3" name="respuesta" value="8" style="display: none;"
+                            onchange="verificarRespuesta()">
+                        8
+                    </label>
+                    <label class="opcion">
+                        <input type="radio" id="opcion4" name="respuesta" value="9" style="display: none;"
+                            onchange="verificarRespuesta()">
+                        9
+                    </label>
+                </div>
+            </form>
+            <div class="resultado" id="resultado"></div>
+        </div>
+
+        <div class="exercise-box">
+
+            <h2>Ejercicio de Estadística</h2>
+            <p>Indica cuáles variables son cualitativas y cuáles cuantitativas arrastrando las opciones a las cajas
+                correspondientes.</p>
+
+            <div class="container">
+                <div id="options">
+                    <div class="draggable" draggable="true" ondragstart="drag(event)">Edad</div>
+                    <div class="draggable" draggable="true" ondragstart="drag(event)">Color de ojos</div>
+                    <div class="draggable" draggable="true" ondragstart="drag(event)">Peso</div>
+                    <div class="draggable" draggable="true" ondragstart="drag(event)">Género</div>
+                    <div class="draggable" draggable="true" ondragstart="drag(event)">Altura</div>
+                    <div class="draggable" draggable="true" ondragstart="drag(event)">Estado civil</div>
+                </div>
+
+                <div class="dropzone-container">
+                    <h3>Variables Cualitativas</h3>
+                    <h3>Variables Cuantitativas</h3>
+                    <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+
+                    <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="btn corregir" onclick="checkAnswers()">Corregir</button>
+
+            </div>
+            <p id="result2"></p>
+
+        </div>
+
+        <div class="exercise-box">
+
+            <h1>Ejercicio de Geometría</h1>
+            <p>¿Cuál es el área de un rectángulo que tiene una base de 5 unidades y una altura de 3 unidades?</p>
+
+            <div style="display: grid; align-items: center; justify-content: center;">
+                <div class="rectangulo"></div>
+                <div class="medida altura">Altura: 3 unidades</div>
+            </div>
+            <div class="medida base">Base: 5 unidades</div>
+
+            <form id="quizForm">
+                <div class="opciones">
+                    <label class="opcion">
+                        <input type="radio" id="opcion1" name="respuesta2" value="15" style="display: none;"
+                            onchange="verificarRespuesta()">
+                        15
+                    </label>
+                    <label class="opcion">
+                        <input type="radio" id="opcion2" name="respuesta2" value="10" style="display: none;"
+                            onchange="verificarRespuesta()">
+                        10
+                    </label>
+                    <label class="opcion">
+                        <input type="radio" id="opcion3" name="respuesta2" value="8" style="display: none;"
+                            onchange="verificarRespuesta()">
+                        8
+                    </label>
+                    <label class="opcion">
+                        <input type="radio" id="opcion4" name="respuesta2" value="20" style="display: none;"
+                            onchange="verificarRespuesta()">
+                        20
+                    </label>
+                </div>
+                <div class="resultado2" id="resultado2"></div>
+            </form>
+
+        </div>
+
+        <div class="buttons">
+            <a href="../examen.html" class="btn volver">Volver</a>
+        </div>
+
+        <script>
+
+            //primer ejercicio
+
+
+            function checkAnswer() {
+                const userAnswer = document.getElementById('answer').value;
+                const correctAnswer = 4; // 2x + 3 = 11 // 2x = 8 -> x = 4
+
+                if (userAnswer == correctAnswer) {
+                    document.getElementById('result').innerText = "¡Correcto!";
+                    document.getElementById('result').style.color = "green";
+                } else {
+                    document.getElementById('result').innerText = "Intenta de nuevo.";
+                    document.getElementById('result').style.color = "red";
+                }
+            }
+
+            function resetInput() {
+                document.getElementById('answer').value = '';
+                document.getElementById('result').innerText = '';
+            }
+
+            //segundo ejercicio
+
+
+            function verificarRespuesta() {
+                const opciones = document.getElementsByName('respuesta');
+                let respuestaSeleccionada;
+                for (const opcion of opciones) {
+                    if (opcion.checked) {
+                        respuestaSeleccionada = opcion.value;
+                        break;
+                    }
+                }
+
+                const resultadoDiv = document.getElementById('resultado');
+                if (respuestaSeleccionada) {
+                    if (respuestaSeleccionada === "8") {
+                        resultadoDiv.textContent = "¡Correcto! 5 + 3 es 8.";
+                        resultadoDiv.style.color = "green"; // Cambiar color a verde si es correcto
+                    } else {
+                        resultadoDiv.textContent = "Incorrecto. Intenta de nuevo.";
+                        resultadoDiv.style.color = "red"; // Cambiar color a rojo si es incorrecto
+                    }
+                }
+            }
+
+
+            //tercer ejercicio
+
+
+            const correctQualitative = ["Color de ojos", "Género", "Estado civil"];
+            const correctQuantitative = ["Edad", "Peso", "Altura"];
+
+            function allowDrop(event) {
+                event.preventDefault();
+            }
+
+            function drag(event) {
+                event.dataTransfer.setData("text", event.target.innerHTML);
+            }
+
+            function drop(event) {
+                event.preventDefault();
+                let data = event.dataTransfer.getData("text");
+                event.target.innerHTML += data + "<br>"; // Añade la variable arrastrada
+            }
+
+            function checkAnswers() {
+                const qualitativeZone = document.getElementById("qualitative").innerHTML.trim().split("<br>").filter(Boolean);
+                const quantitativeZone = document.getElementById("quantitative").innerHTML.trim().split("<br>").filter(Boolean);
+                const result = document.getElementById("result2");
+
+                const qualitativeCorrect = correctQualitative.every(item => qualitativeZone.includes(item));
+                const quantitativeCorrect = correctQuantitative.every(item => quantitativeZone.includes(item));
+
+                // Comprobar si hay respuestas incorrectas en las zonas
+                const qualitativeIncorrect = qualitativeZone.some(item => !correctQualitative.includes(item));
+                const quantitativeIncorrect = quantitativeZone.some(item => !correctQuantitative.includes(item));
+
+                if (qualitativeCorrect && !qualitativeIncorrect && quantitativeCorrect && !quantitativeIncorrect) {
+                    result.innerHTML = " ¡Todas las respuestas son correctas!";
+                } else {
+                    result.innerHTML = "Algunas respuestas son incorrectas. Inténtalo de nuevo.";
+                }
+            }
+
+
+            //cuarto ejercicio
+
+
+            function verificarRespuesta() {
+                const opciones = document.getElementsByName('respuesta2');
+                let respuestaSeleccionada;
+                for (const opcion of opciones) {
+                    if (opcion.checked) {
+                        respuestaSeleccionada = opcion.value;
+                        break;
+                    }
+                }
+
+                const resultadoDiv = document.getElementById('resultado2');
+                if (respuestaSeleccionada) {
+                    if (respuestaSeleccionada === "15") {
+                        resultadoDiv.textContent = "¡Correcto! El área del rectángulo es 15 unidades cuadradas.";
+                        resultadoDiv.style.color = "green"; // Cambiar color a verde si es correcto
+                    } else {
+                        resultadoDiv.textContent = "Incorrecto. Intenta de nuevo.";
+                        resultadoDiv.style.color = "red"; // Cambiar color a rojo si es incorrecto
+                    }
+                }
+            }
+        </script>
+</body>
+
+</html>
